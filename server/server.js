@@ -21,6 +21,7 @@ const server = new ApolloServer({
   plugins: [
     ApolloServerPluginLandingPageGraphQLPlayground(),
   ],
+  context: ({ req }) => req.headers
 });
 
 // added this line
